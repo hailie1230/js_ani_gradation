@@ -1,13 +1,11 @@
 // import GlowParticle from './Glowparticle.js';
-
 const COLORS = [
-  {r: 244, g: 143, b: 177},   //pink
-  {r: 206, g: 146, b: 216},   //purple
-  {r: 128, g: 203, b: 196},   //blue green
-  {r: 197, g: 225, b: 165},   //yellow green
-  {r: 255, g: 204, b: 128}    //yellow
+  {r: 244, g: 143, b: 177},
+  {r: 206, g: 146, b: 216},
+  {r: 128, g: 203, b: 196},
+  {r: 197, g: 225, b: 165},
+  {r: 255, g: 204, b: 128} 
 ];
-
 class App{
   constructor(){
     this.canvas = document.createElement("canvas");
@@ -23,7 +21,6 @@ class App{
     this.resize();
     window.requestAnimationFrame(this.animate.bind(this));
   }
-
   resize() {
     this.stageWidth = document.body.clientWidth;
     this.stageHeight = document.body.clientHeight;
@@ -33,7 +30,6 @@ class App{
     this.ctx.globalCompositeOperation = 'saturation';
     this.createParticles();
   }
-
   createParticles() {
     let curColor = 0;
     this.particles = [];
@@ -60,7 +56,6 @@ class App{
   }
 }
 const PI2 = Math.PI * 2;
-
 class GlowParticle{
   constructor(x, y, radius, rgb) {
     this.x = x;
@@ -103,14 +98,13 @@ class GlowParticle{
       this.radius
     );
     g.addColorStop(0, `rgba(${this.rgb.r}, ${this.rgb.g}, ${this.rgb.b} ,1)`);
-    g.addColorStop(1, `rgba(${this.rgb.r}, ${this.rgb.g}, ${this.rgb.b} ,0)`); 
+    g.addColorStop(1, `rgba(${this.rgb.r}, ${this.rgb.g}, ${this.rgb.b} ,0)`);
 
     ctx.fillStyle = g; 
     ctx.arc(this.x, this.y, this.radius, 0, PI2, false);
     ctx.fill();
   }
 }
-
 window.onload = () => {
   new App();
 };
