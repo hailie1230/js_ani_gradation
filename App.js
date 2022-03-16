@@ -3,7 +3,7 @@ import GlowParticle from './Glowparticle.js';
 const COLORS = [
   {r: 244, g: 143, b: 177},   //pink
   {r: 206, g: 146, b: 216},   //purple
-  {r: 239, g: 154, b: 154},   //deep pink
+  {r: 128, g: 203, b: 196},   //deep green
   {r: 255, g: 171, b: 145},   //coral
   {r: 255, g: 204, b: 128}    //yellow
 ];
