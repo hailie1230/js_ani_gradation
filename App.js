@@ -15,7 +15,7 @@ class App{
     document.body.appendChild(this.canvas);
 
     this.pixelRatio = (window.devicePixelRatio > 1) ? 2 : 1;
-    this.totalParticles = 15;
+    this.totalParticles = 30;
     this.particles = [];
     this.maxRadius = 900;
     this.minRadius = 400;
