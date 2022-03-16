@@ -13,10 +13,10 @@ class App{
     document.body.appendChild(this.canvas);
 
     this.pixelRatio = (window.devicePixelRatio > 1) ? 2 : 1;
-    this.totalParticles = 8;
+    this.totalParticles = 7;
     this.particles = [];
-    this.maxRadius = 900;
-    this.minRadius = 400;
+    this.maxRadius = 800;
+    this.minRadius = 200;
     window.addEventListener("resize",this.resize.bind(this),false);
     this.resize();
     window.requestAnimationFrame(this.animate.bind(this));
